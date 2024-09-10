@@ -10,6 +10,8 @@ export PATH=/opt/homebrew/bin:$PATH
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="gozilla"
+# gozilla
+# Avit
 
 
 # Set list of themes to pick from when loading at random
@@ -106,8 +108,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=python3
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 source /Users/vsp/.config/broot/launcher/bash/br
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# set up vi editor mode
+bindkey -v
+# bindkey -a 'H' vi-first-non-blank
+# bindkey -a 'L' vi-end-of-line
